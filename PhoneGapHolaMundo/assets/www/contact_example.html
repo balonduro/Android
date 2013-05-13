@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Example</title>
+
+    <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+	function onSuccess(contact) {
+	    alert("Save Success");
+	};
+
+	function onError(contactError) {
+	    alert("Error = " + contactError.code);
+	};
+
+	function onDeviceReady() {
+		// create a new contact object
+		var contact = navigator.contacts.create();
+		contact.displayName = "Plumber";
+		contact.nickname = "Plumber";       //specify both to support all devices
+		
+		// populate some fields
+		var name = new ContactName();
+		name.givenName = "Jane";
+		name.familyName = "Doe";
+		contact.name = name;
+		
+		// save to device
+		contact.save(onSuccess,onError);
+
+	}
+	
+    </script>
+  </head>
+  <body>
+    <h1>Example</h1>
+    Create a new contact
+  </body>
+</html>
