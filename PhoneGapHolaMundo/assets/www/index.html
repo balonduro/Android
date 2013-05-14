@@ -2,26 +2,31 @@
  <html>
  <head>
  <title>Ejemplo</title>
- <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--<script src="custom-scripts-here.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+ 
+<script type="text/javascript" src="jquery.mobile-1.3.1.js"></script>
+ 
  </head>
 
  <body>
- <h1>Hola mundo</h1>
-<p>Esta es mi primera aplicacion</p>
-<a href="view1.html">Adios mundo</a>
-<br/>
-<a href="geolocalization.html">Geolocalizacion</a>
-<br/>
-<a href="takephoto.html">Take a photo</a>
-<br/>
-<a href="contact_example.html">Create a contact</a>
-<br/>
-<a href="holamundo_jquery.html">jQuery hello world</a>
-<br/>
-<a href="jquery_enhancements.html">jQuery enhancements</a>
-<br/>
-<a href="multipage.html">multiple page</a>
-<br/>
-
+ <div data-role="page" data-title="Home">
+<div data-role="header">
+<h1>Hola mundo</h1>
+</div>
+<div data-role="content">
+<a href="view1.html" data-role="button">Adios mundo</a>
+<a href="geolocalization.html" data-role="button">Geolocalizacion</a>
+<a href="takephoto.html" data-role="button">Take a photo</a>
+<a href="contact_example.html" data-role="button">Create a contact</a>
+<a href="holamundo_jquery.html" data-role="button">jQuery hello world</a>
+<a href="jquery_enhancements.html" data-role="button">jQuery enhancements</a>
+<a href="multipage.html" data-role="button">multiple page</a>
+ 
+</div>
+</div>
  </body>
  </html>
