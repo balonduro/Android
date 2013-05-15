@@ -1,0 +1,26 @@
+<head>
+<meta charset="utf-8">
+<title>Contacts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--<script src="custom-scripts-here.js"></script>-->
+<script type="text/javascript" src="jquery.mobile-1.3.1.js"></script>
+</head>
+
+<body>
+<!-- Logout link -->
+<a href="#logout" data-transition="slidedown">Logout</a>
+<!-- Create an action sheet by simply removing the header! -->
+<div data-role="dialog" id="logout">
+<div data-role="content">
+<span class="title">Are you sure?</span>
+<a href="index.html" data-role="button" data-theme="b">Yes, I'm Sure!</a>
+<a href="index.html" data-role="button" data-theme="c" data-rel="back">No Way!</a>
+</div>
+<style>
+span.title { display:block; text-align:center;
+margin-top:10px; margin-bottom:20px; }
+</style>
+</div>
+</body>
