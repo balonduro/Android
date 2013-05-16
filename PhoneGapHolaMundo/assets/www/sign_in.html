@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+ <html>
+ <head>
+ <title>Sign In</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--<script src="custom-scripts-here.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+ 
+<script type="text/javascript" src="jquery.mobile-1.3.1.js"></script>
+ 
+</head>
+<body>
+<div data-role="page" data-title="Mi Login">
+
+<div data-role="header">
+	<h1>Sign IN</h1>
+</div>
+
+<div data-role="content">
+<input type="text" name="username" id="username" placeholder="user name"/>
+<input type="password" name="password" id="password" placeholder="password"/>
+<div class="ui-body ui-body-b">
+	<fieldset class="ui-grid-a">
+		<div class="ui-block-a"><a href="milogin.html" data-role="button" data-theme="d">Cancel</a></div>
+		<div class="ui-block-b"><a href="#" id="sign_in" data-role="button" data-theme="a">Sign in</a></div>
+   </fieldset>
+</div>
+
+<script type="text/javascript">
+$(function() {
+   // Get input value from localStorage
+   $('#sign_in').on('click', function() {
+      var DBusername = localStorage.getItem("username");
+      var DBpassword = localStorage.getItem("password");
+      
+      var username = $("#username").val();
+      var password = $("#password").val();
+      
+       if ((username == DBusername) && (password == DBpassword)) {
+    	   alert("Credentials OK");
+       }
+      else {
+    	  alert("Wrong Credentials");
+      }
+   });
+});
+</script>
+	
+</div>
+</div>
+</body>
+</html>

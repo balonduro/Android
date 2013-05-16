@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+ <html>
+ <head>
+ <title>Sign Up</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.1.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<!--<script src="custom-scripts-here.js"></script>-->
+<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+ 
+<script type="text/javascript" src="jquery.mobile-1.3.1.js"></script>
+ 
+</head>
+<body>
+<div data-role="page" data-title="Mi Login">
+
+<div data-role="header">
+	<h1>Sign UP</h1>
+</div>
+
+<div data-role="content">
+<input type="text" name="username" id="username" placeholder="user name"/>
+<input type="password" name="password" id="password" placeholder="password"/>
+<input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password"/>
+<div class="ui-body ui-body-b">
+	<fieldset class="ui-grid-a">
+		<div class="ui-block-a"><a href="milogin.html" data-role="button" data-theme="d">Cancel</a></div>
+		<div class="ui-block-a"><a href="#" id="save" data-role="button" data-theme="d">Save</a></div>
+   </fieldset>
+</div>
+
+<script type="text/javascript">
+$(function() {
+   // Save input value to localStorage
+   $('#save').on('click', function() {
+      var username = $('#username').val();
+      var password = $("#password").val();
+      localStorage.setItem("username", username);
+      localStorage.setItem("password", password);
+   });
+});
+</script>
+	
+</div>
+</div>
+</body>
+</html>
